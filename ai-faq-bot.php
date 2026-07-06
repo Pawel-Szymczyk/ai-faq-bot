@@ -14,8 +14,10 @@ define('AI_FAQ_BOT_URL',plugin_dir_url(__FILE__));
 
 
 require_once AI_FAQ_BOT_DIR.'includes/class-ai-api.php';
+require_once AI_FAQ_BOT_DIR.'includes/class-ai-faq.php';
 require_once AI_FAQ_BOT_DIR.'admin/settings-page.php';
 
 add_action('plugins_loaded',function(){
+    new AI_FAQ();
     new AI_FAQ_Admin_Settings();
 });
