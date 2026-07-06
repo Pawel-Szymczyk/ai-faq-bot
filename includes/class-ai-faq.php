@@ -103,12 +103,16 @@ class AI_FAQ {
 
     // ── Assets ───────────────────────────────────────────────────────────
     public function enqueue_assets(): void {
+        global $post;
+        if ( ! is_a( $post, 'WP_Post' ) || ! has_shortcode( $post->post_content, 'ai_faq_bot' ) ) {
+            return;
+        }
+
         wp_enqueue_style( 'ai-faq-chat', AI_FAQ_BOT_URL . 'assets/css/chat.css', [], AI_FAQ_BOT_VERSION );
         wp_enqueue_script( 'ai-faq-chat', AI_FAQ_BOT_URL . 'assets/js/chat.js', [], AI_FAQ_BOT_VERSION, true );
-        // wp_localize_script creates window.AiChatConfig object in JavaScript.
         wp_localize_script( 'ai-faq-chat', 'AiChatConfig', [
-            'apiUrl'  => rest_url( 'ai-faq-bot/v1/chat' ),
-            'nonce'   => wp_create_nonce( 'wp_rest' )
+            'apiUrl' => rest_url( 'ai-faq-bot/v1/chat' ),
+            'nonce'  => wp_create_nonce( 'wp_rest' ),
         ] );
     }
  

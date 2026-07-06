@@ -181,6 +181,12 @@ GPL v2 or later (zgodnie ze standardem WordPress).
 
 ---
 
+## Screenshots
+![AI FAQ Bot widget 1](no_info.png)
+![AI FAQ Bot widget 2](add_info.png)
+![AI FAQ Bot widget 3](get_info.png)
+---
+
 ## Autor
 
 **Paweł Szymczyk** — [github.com/Pawel-Szymczyk](https://github.com/Pawel-Szymczyk)

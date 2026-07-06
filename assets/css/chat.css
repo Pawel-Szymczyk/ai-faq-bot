@@ -31,7 +31,7 @@
  
 /* ← DOSTOSUJ: zmień #1E40AF na kolor marki klienta */
 .ai-message--user      { background:#1E40AF; color:#fff; align-self:flex-end;  border-bottom-right-radius:4px; }
-.ai-message--assistant { background:#fff; border:1px solid #e2e8f0; align-self:flex-start; border-bottom-left-radius:4px; }
+.ai-message--assistant { background:#fff; border:1px solid #e2e8f0; align-self:flex-start; border-bottom-left-radius:4px; color: #000000; }
 .ai-message--error     { background:#fee2e2; color:#991b1b; align-self:center; font-size:13px; }
 .ai-message--loading   { background:#f1f5f9; color:#94a3b8; align-self:flex-start; font-size:20px; letter-spacing:4px; }
  
