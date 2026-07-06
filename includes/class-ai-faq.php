@@ -108,7 +108,7 @@ class AI_FAQ {
         // wp_localize_script creates window.AiChatConfig object in JavaScript.
         wp_localize_script( 'ai-faq-chat', 'AiChatConfig', [
             'apiUrl'  => rest_url( 'ai-faq-bot/v1/chat' ),
-            'nonce'   => wp_create_nonce( 'wp_rest' ),  // CSRF protection
+            'nonce'   => wp_create_nonce( 'wp_rest' )
         ] );
     }
  
