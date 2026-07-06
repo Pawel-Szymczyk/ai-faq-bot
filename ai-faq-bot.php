@@ -13,6 +13,7 @@ define('AI_FAQ_BOT_DIR',plugin_dir_path(__FILE__));
 define('AI_FAQ_BOT_URL',plugin_dir_url(__FILE__));
 
 
+require_once AI_FAQ_BOT_DIR.'includes/class-ai-api.php';
 require_once AI_FAQ_BOT_DIR.'admin/settings-page.php';
 
 add_action('plugins_loaded',function(){
